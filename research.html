@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lulu Wang - Research</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50;
+            padding: 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 960px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin: 0;
+        }
+
+        .nav-links a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            background-color: #34495e;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            border-bottom: 2px solid #3498db;
+            color: #2c3e50;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+        }
+
+        .publication {
+            margin-bottom: 8px;
+            padding: 12px;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 1px;
+        }
+
+        .journal {
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 1px;
+        }
+
+        .authors {
+            margin-bottom: 1px;
+            color: #555;
+        }
+
+        .links {
+            margin-top: 1px;
+        }
+
+        .links a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 10px;
+            font-weight: 500;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        .status {
+            font-style: italic;
+            color: #000;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 1px;
+        }
+
+        .version-info {
+            color: #7f8c8d;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .coverage {
+            margin-top: 2px;
+            font-size: 13px;
+            color: #7f8c8d;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .nav-links a {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="papers/lulu_wang_cv.pdf">CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h1>Research</h1>
+
+        <h2>Working Papers</h2>
+
+        <div class="publication">
+            <div class="publication-title"><a href="papers/payment_networks.pdf">Regulating Competing Payment Networks</a></div>
+            <div class="status">Revise and Resubmit, <em>American Economic Review</em></div>
+            <div class="version-info">March 2025</div>
+            <div class="links">
+                <a href="papers/payment_networks.pdf">Paper</a>
+                <!-- TODO: replace # with actual URLs for media links -->
+                | Coverage: <a href="#">NYT</a>,
+                <a href="#">The Economist</a>,
+                <a href="#">Kellogg Insight</a>,
+                <a href="#">BBC</a>
+            </div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">Who Pays for Payments</div>
+            <div class="authors">(with Mark Egan, Gregor Matvos, Amit Seru, and Vincent Yao)</div>
+            <div class="version-info">January 2026</div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">Minority Specialized Lenders</div>
+            <div class="authors">(with Erica Jiang, Gregor Matvos, and Amit Seru)</div>
+            <div class="version-info">May 2024</div>
+        </div>
+
+        <h2>Work in Progress</h2>
+
+        <div class="publication">
+            <div class="publication-title">Financial Supermarkets</div>
+            <div class="authors">(with Shengmao Cao)</div>
+        </div>
+
+        <div class="publication">
+            <div class="publication-title">Interchange and Informality</div>
+            <div class="authors">(with Sean Higgins)</div>
+        </div>
+
+    </div>
+</body>
+</html>

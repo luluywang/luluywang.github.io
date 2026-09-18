@@ -3,113 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lulu Wang - Home</title>
+    <title>Lulu Wang</title>
+    <meta name="description" content="Lulu Wang, Assistant Professor of Finance at the Kellogg School of Management, Northwestern University.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --text: #727272;
+            --heading: #222;
+            --accent: #267cb9;
+            --rule: #e5e5e5;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            font-size: 15px;
             line-height: 1.6;
-            color: #333;
-            background-color: #fff;
+            color: var(--text);
+            background: #fff;
             margin: 0;
-            padding: 0;
-        }
-
-        /* Navigation Bar */
-        .navbar {
-            background-color: #2c3e50;
-            padding: 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            max-width: 960px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        .nav-links li {
-            margin: 0;
-        }
-
-        .nav-links a {
-            display: block;
-            color: white;
-            text-decoration: none;
-            padding: 15px 20px;
-            transition: background-color 0.3s;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover, .nav-links a.active {
-            background-color: #34495e;
-        }
-
-        /* Main Content */
-        .container {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 30px 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        table td {
-            padding: 10px;
-            vertical-align: top;
-        }
-
-        .photo-cell {
-            width: 300px;
-        }
-
-        img {
-            max-width: 300px;
-            height: auto;
-            border-radius: 8px;
-        }
-
-        h1 {
-            font-size: 28px;
-            color: #000;
-            margin: 0 0 5px 0;
-        }
-
-        h2 {
-            font-size: 24px;
-            border-bottom: 1px solid #ccc;
-            color: #000;
-            margin: 30px 0 15px 0;
-            padding-bottom: 5px;
-        }
-
-        h3 {
-            font-size: 18px;
-            margin: 5px 0;
-            color: #2c3e50;
-        }
-
-        p {
-            margin: 15px 0;
         }
 
         a {
-            color: #3498db;
+            color: var(--accent);
             text-decoration: none;
         }
 
@@ -117,164 +38,248 @@
             text-decoration: underline;
         }
 
-        .contact-info {
-            line-height: 1.5;
+        .wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 50px 30px;
         }
 
-        .institution {
-            font-size: 18px;
-            color: #2c3e50;
-            font-weight: 500;
-            margin: 8px 0;
+        /* Left column: fixed on desktop */
+        header {
+            width: 270px;
+            float: left;
+            position: fixed;
         }
 
-        .links {
-            margin-top: 8px;
+        header img {
+            width: 200px;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 18px;
         }
 
-        .links a {
-            margin-right: 4px;
-            margin-left: 4px;
-            color: #3498db;
-            font-weight: 500;
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--heading);
+            margin: 0 0 6px 0;
+            line-height: 1.2;
         }
 
-        .intro-text {
-            font-size: 16px;
-            line-height: 1.6;
-            margin: 30px 0;
-            color: #555;
+        header p {
+            margin: 0 0 14px 0;
+            font-size: 14px;
         }
 
-        .update-box {
-            margin-top: 30px;
-            padding: 18px 20px;
-            background-color: #f8f9fa;
-            border-left: 4px solid #2c3e50;
-            border-radius: 6px;
+        header .title {
+            color: var(--heading);
         }
 
-        .update-box p {
-            margin: 8px 0;
+        header .jump a {
+            margin-right: 6px;
         }
 
-        .update-label {
+        /* Right column */
+        section {
+            width: 540px;
+            float: right;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 20px;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--heading);
+            margin: 0 0 18px 0;
         }
 
-        /* Mobile Responsive Styles */
-        @media (max-width: 768px) {
-            .container {
-                padding: 20px 15px;
+        hr {
+            border: 0;
+            border-top: 1px solid var(--rule);
+            margin: 32px 0;
+        }
+
+        .news {
+            font-size: 14px;
+        }
+
+        .paper {
+            margin-bottom: 24px;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            color: var(--heading);
+        }
+
+        .paper-title a {
+            color: var(--heading);
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .paper-title a:hover {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .meta {
+            font-size: 14px;
+        }
+
+        .status {
+            font-style: italic;
+        }
+
+        .toggle {
+            font-size: 14px;
+            color: var(--accent);
+            cursor: pointer;
+            background: none;
+            border: 0;
+            padding: 0;
+            font-family: inherit;
+        }
+
+        .toggle:hover {
+            text-decoration: underline;
+        }
+
+        .abstract {
+            display: none;
+            font-size: 14px;
+            margin-top: 8px;
+            padding-left: 12px;
+            border-left: 2px solid var(--rule);
+        }
+
+        .abstract.open {
+            display: block;
+        }
+
+        /* Short windows: let the left column scroll so it isn't cut off */
+        @media (max-height: 640px) {
+            header {
+                position: static;
+            }
+        }
+
+        /* Stack columns on narrow screens */
+        @media (max-width: 900px) {
+            .wrapper {
+                padding: 30px 20px;
             }
 
-            table, tbody, tr, td {
-                display: block !important;
-                width: 100% !important;
+            header, section {
+                width: auto;
+                float: none;
+                position: static;
             }
 
-            .photo-cell {
-                width: 100% !important;
-                text-align: center;
-                margin-bottom: 20px;
+            header {
+                padding-bottom: 10px;
+                border-bottom: 1px solid var(--rule);
+                margin-bottom: 30px;
             }
 
-            img {
-                max-width: 250px;
-                margin: 0 auto;
-            }
-
-            h1 {
-                font-size: 24px;
-                text-align: center;
-            }
-
-            h3 {
-                font-size: 16px;
-                text-align: center;
-                margin-bottom: 15px;
-            }
-
-            .institution {
-                font-size: 16px;
-                text-align: center;
-            }
-
-            .contact-info {
-                text-align: center;
-            }
-
-            .links {
-                text-align: center;
-                margin-top: 15px;
-            }
-
-            .intro-text {
-                font-size: 15px;
-                margin: 25px 0;
-            }
-
-            .update-box {
-                padding: 16px;
-            }
-
-            .nav-links a {
-                padding: 12px 15px;
-                font-size: 14px;
+            header img {
+                width: 160px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <ul class="nav-links">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="papers/lulu_wang_cv.pdf">CV</a></li>
-            </ul>
-        </div>
-    </nav>
+<div class="wrapper">
 
-    <!-- Main Content -->
-    <div class="container">
-        <table cellspacing="0" cellpadding="0">
-            <tr>
-                <td class="photo-cell">
-                    <img src="papers/lulu_wang_crop.png" alt="Lulu Wang" />
-                </td>
-                <td>
-                    <h1>Lulu Wang</h1>
-                    <h3>Assistant Professor of Finance</h3>
+    <header>
+        <img src="papers/lulu_wang_crop.png" alt="Lulu Wang">
+        <h1>Lulu Wang</h1>
+        <p><span class="title">Assistant Professor of Finance</span><br>
+            Kellogg School of Management<br>
+            Northwestern University</p>
+        <p>Global Hub 4463<br>
+            2211 Campus Dr<br>
+            Evanston, IL 60208</p>
+        <p><a href="mailto:lulu.wang@kellogg.northwestern.edu">lulu.wang@kellogg.northwestern.edu</a></p>
+        <p class="jump"><a href="papers/lulu_wang_cv.pdf">CV</a> · <a href="#research">Research</a></p>
+    </header>
 
-                    <div class="contact-info">
-                        <div class="institution">Kellogg School of Management, Northwestern University</div>
+    <section>
+        <p>I am an Assistant Professor of Finance at the <a href="https://www.kellogg.northwestern.edu/">Kellogg School of Management</a>, Northwestern University.</p>
+        <p>I am interested in questions at the intersection of household finance, corporate finance, and industrial organization.</p>
 
-                        Global Hub 4463<br>
-                        2211 Campus Dr, Evanston, IL 60208<br>
-                        lulu.wang@kellogg.northwestern.edu
+        <p class="news"><strong>September 2026:</strong> New drafts of <a href="papers/fin_supermarkets.pdf">Financial Supermarkets? Cross-Selling in Retail Banking</a> and <a href="papers/Payments_EMSWY_Public.pdf">Who Pays for Payments?</a></p>
 
-                        <div class="links">
-                            <a href="papers/lulu_wang_cv.pdf">CV</a>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <hr>
 
-        <div class="intro-text">
-            <p>I am an Assistant Professor of Finance at the <a href="https://www.kellogg.northwestern.edu/">Kellogg School of Management</a>, Northwestern University.</p>
-            <p>I am interested in questions at the intersection of household finance, corporate finance, and industrial organization.</p>
+        <h2 id="research">Working Papers</h2>
+
+        <div class="paper">
+            <div class="paper-title"><a href="papers/fin_supermarkets.pdf">Financial Supermarkets? Cross-Selling in Retail Banking</a></div>
+            <div class="meta">with Shengmao Cao · September 2026</div>
+            <button class="toggle" type="button">Abstract (click to expand)</button>
+            <div class="abstract">Many consumers choose banks, not individual financial products. We study how such product complementarity shapes competition and regulation in retail banking. Across three U.S. consumer surveys, consumers are three to five times more likely to hold credit cards, auto loans, mortgages, and brokerage accounts at their deposit bank than independent product choice implies. We use the 2019 transfer of Walmart’s credit-card portfolio to Capital One to show that winning a consumer’s card business helps win their deposits, providing quasi-experimental evidence of complementarity. An original survey with discrete choice experiments and retrospective questions on how consumers came to hold their accounts lets us separate the mechanisms behind cross-holding, and we use it to estimate an equilibrium model of joint deposit and credit-card choice. We find that complementarity primarily reflects utility and accounts for about 60 percent of excess cross-holding, with the rest reflecting correlated preferences. Complementarity shapes product pricing in ways that single-market analyses miss. Rewards credit cards are loss leaders: they earn 8 percent of banks’ accounting profits but generate 21 percent of franchise value by attracting and retaining depositors. Interchange-fee regulation that compresses rewards raises deposit rates, and a bank merger that creates complementarity lowers deposit rates, as the merged bank captures the synergy rather than passing it through.</div>
         </div>
 
-        <div class="update-box">
-            <p><span class="update-label">Update (September 2026):</span> New drafts.</p>
-            <p><a href="papers/fin_supermarkets.pdf">Financial Supermarkets</a> (with Shengmao Cao)</p>
-            <p><a href="papers/Payments_EMSWY_Public.pdf">Who Pays for Payments?</a> (with Mark Egan, Gregor Matvos, Amit Seru, and Vincent Yao)</p>
+        <div class="paper">
+            <div class="paper-title"><a href="papers/BankBranches_April13_Merged.pdf">Bank Branch Density and Fragility</a></div>
+            <div class="meta">with Efraim Benmelech, Jun Yang, and Michał Zator · April 2026</div>
+            <div class="meta status">Revise and Resubmit, Journal of Finance</div>
+            <button class="toggle" type="button">Abstract (click to expand)</button>
+            <div class="abstract">Bank branch density, defined as the number of a bank’s branches divided by its total deposits, declined significantly between 2010 and 2022. We show that the transition from branch-based to digital banking has concentrated financially and technologically sophisticated depositors in low-density banks, thereby increasing the flightiness of their deposits. Survey microdata on consumers’ bank choices show that depositors at low-density banks are more likely to read financial news, invest in money market mutual funds, and report intentions to switch banks. This pattern suggests that low-density banks attract a financially sophisticated clientele, not that banks’ digital platforms make depositors more attentive. This clientele exposes low-density banks to deposit flightiness risk. When interest rates rose in 2023, these banks suffered steeper stock declines and larger deposit outflows, even conditional on asset-side losses, than typical banks.</div>
         </div>
 
-    </div>
+        <div class="paper">
+            <div class="paper-title"><a href="papers/Payments_EMSWY_Public.pdf">Who Pays for Payments?</a></div>
+            <div class="meta">with Mark Egan, Gregor Matvos, Amit Seru, and Vincent Yao · April 2026 · <a href="https://www.nber.org/papers/w35067">NBER</a></div>
+            <button class="toggle" type="button">Abstract (click to expand)</button>
+            <div class="abstract">We use novel data on the composition and cost of payments across U.S. merchants to quantify consumer redistribution in the payment system. Cards charge interchange fees to merchants to fund consumer rewards. When merchants raise prices for all consumers in response to these costs, users of low-cost payment methods (e.g., cash and debit) cross-subsidize high-reward credit card users who shop at the same merchant. This standard mechanism implicitly assumes that consumers using different payment methods shop at the same merchants and that merchants face similar fees. We show instead that incidence depends on the joint distribution of payment choices across merchants. We document two key forces that shape redistribution. First, consumer sorting—where consumers who use different payment methods shop at different merchants—limits the exposure of cash and debit users to the effects of high interchange fees. Second, interchange fees vary across merchants; where users of different payment methods overlap, such as at large grocery stores, fees are lower due to sector discounts and private negotiations. We embed these forces in a sufficient-statistics framework that maps observed heterogeneity directly into redistribution. We estimate that interchange fees transfer approximately $30 billion every year from cash and debit users to credit card users. Consumer sorting and merchant fee heterogeneity reduce the magnitude of this regressive transfer by 25%, but do not eliminate it. Finally, we show that both the Durbin Amendment and the rise of premium credit cards have been regressive, highlighting how policy and innovation can reshape the incidence of platform fees.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title"><a href="papers/payment_jmp.pdf">Regulating Competing Payment Networks</a></div>
+            <div class="meta">April 2026</div>
+            <div class="meta status">Second-Round Revise and Resubmit, American Economic Review</div>
+            <div class="meta">Coverage: <a href="https://www.nytimes.com/2023/03/04/opinion/credit-card-rewards-points-poor-interchange-fees.html">NYT</a>, <a href="https://www.economist.com/special-report/2023/05/15/the-old-bank/card-model-is-still-entrenched-in-the-rich-world">The Economist</a>, <a href="https://insight.kellogg.northwestern.edu/article/who-pays-generous-credit-card-rewards">Kellogg Insight</a>, <a href="https://www.bbc.com/news/articles/c5yen4k1xnko">BBC</a></div>
+            <button class="toggle" type="button">Abstract (click to expand)</button>
+            <div class="abstract">Payment networks fund consumer rewards through merchant fees. Because merchants rarely surcharge, consumers fail to internalize costs and overuse credit cards relative to the social optimum. I develop a quantitative model of platform competition to compare policy solutions. Capping merchant fees reduces rewards and credit card use, increasing total welfare by $27 billion. Because consumers are sensitive to rewards but merchants are insensitive to fees, network competition inflates rewards and exacerbates the costs of over-adoption. Dual-routing mandates that increase consumer multi-homing redirect competition from rewards toward merchant fees, increasing welfare. The direction of competition matters, not just its intensity.</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">Minority Specialized Lenders</div>
+            <div class="meta">with Erica Jiang, Gregor Matvos, and Amit Seru · May 2024</div>
+            <div class="meta status">Contact for draft</div>
+        </div>
+
+        <hr>
+
+        <h2>Resting Papers</h2>
+
+        <div class="paper">
+            <div class="paper-title"><a href="papers/antitrust_fin_frictions.pdf">Financial Frictions and Startup Antitrust</a></div>
+            <div class="meta">June 2022</div>
+            <button class="toggle" type="button">Abstract (click to expand)</button>
+            <div class="abstract">Financial frictions can overturn conventional antitrust analysis of startup acquisitions. I extend Myers-Majluf to include the option to be acquired. Low types are acquired, medium types issue equity, and high types do not invest. Blocking acquisitions lowers the average type of equity issuers and raises the cost of capital for standalone startups. The welfare loss from lower investment can overwhelm the welfare gains from blocking anticompetitive acquisitions. A case study from the pharmaceutical industry suggests antitrust policy can have a large effect on the valuations of startups who are unlikely to be acquired for anticompetitive reasons.</div>
+        </div>
+
+        <hr>
+
+        <h2>Work in Progress</h2>
+
+        <div class="paper">
+            <div class="paper-title">Interchange and Informality</div>
+            <div class="meta">with Sean Higgins</div>
+        </div>
+    </section>
+
+</div>
+<script>
+    document.querySelectorAll('.toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var abs = btn.nextElementSibling;
+            var open = abs.classList.toggle('open');
+            btn.textContent = open ? 'Abstract (click to hide)' : 'Abstract (click to expand)';
+        });
+    });
+</script>
 </body>
 </html>
